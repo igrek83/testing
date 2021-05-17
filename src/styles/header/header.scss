@@ -1,0 +1,167 @@
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #4c5b66;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0 65px;
+  }
+
+  &__name {
+    @include text('Pacifico', normal, 31px, 36px, $color-white);
+  }
+
+  &__ul {
+    display: flex;
+    justify-content: space-between;
+    width: 336px;
+  }
+
+  &__li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 30px;
+    @include text($font, normal, 15px, 120%, $color-white);
+    transition: color .15s ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__li:hover {
+    color: rgb(192, 191, 191);
+  }
+
+  &__li-active {
+    width: 84px;
+    height: 30px;
+    border-radius: 50px;
+    background: -moz-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(0,0,0) 100%);
+    background: -webkit-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(0,0,0) 100%);
+    background: -ms-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(0,0,0) 100%);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.15),inset 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  }
+
+  &__li-active:hover {
+    color: $color-white;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__image {
+    width: 390px;
+    background-size: contain;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 475px;
+    padding: 62px 0;
+  }
+
+  &__title { 
+    @include text($font, bold, 48px, 120%, $color-white);
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
+
+  &__text {
+    @include text($font, normal, 14px, 150%, $color-white);
+    text-decoration: none;
+    letter-spacing: .5px;
+    margin-top: 10px;
+  }
+
+  &__text_color_gray {
+    color: #737a80;
+  }
+
+  &__button-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 70px;
+    padding-top: 50px;
+  }
+
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: auto;
+    height: 20px;
+    border-bottom: 1px solid $color-white;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__button-image {
+    position: relative;
+    width: 16px;
+    height: 14px;
+    background-size: cover;
+    top: 3px;
+    margin-right: 5px;
+  }
+
+  &__text-button {
+    @include text($font, normal, 14px, 150%, $color-white);
+    text-decoration: none;
+  }
+
+  &__button-active {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #3b90cf;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.42),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.42);
+    border-radius: 40px;
+    width: 202px;
+    height: 46px;
+    opacity: .8;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__button-active:active {
+    box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.42),
+    inset 0px 4px 4px 0px rgba(0, 0, 0, .8);
+  }
+
+  @media all and (max-width: 1150px) {
+    &__container {
+      width: 100%;
+      padding: 0 50px;
+    }
+
+    &__box {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__image {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '../vendor/font.css';
+@import './variables/variables.scss';
+@import './mixin/mixin.scss';
+@import './header/header.scss';
+@import './footer/footer.scss';
+@import './about/about.scss';
+@import './slider/slider.scss';
+@import './feedback/feedback.scss';
+
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: $color-white;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 1903px;
+}
+
+@media all and (max-width: 1919px) {
+  .page {
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 675px) {
+  .page {
+    width: 675px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
